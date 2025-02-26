@@ -123,6 +123,18 @@
         button:hover {
             background-color: #1a365d;
         }
+
+        /* Thank You Message Styles */
+        .success-message {
+            display: none;
+            background-color: #C6F6D5;
+            border: 1px solid #68D391;
+            color: #2F855A;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 6px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -142,28 +154,44 @@
     <main>
         <section class="contact-section">
             <h2>Contact Us</h2>
-            <form name="contact" netlify action="thankyou.html">
+            
+            <!-- Success message (hidden by default) -->
+            <div class="success-message" id="success-message">
+                <h3>Thank You!</h3>
+                <p>Your message has been sent successfully. We'll get back to you soon.</p>
+            </div>
+            
+            <form name="contact" method="POST" data-netlify="true" id="contact-form">
                 <input type="hidden" name="form-name" value="contact">
-                <input type="hidden" name="success_url" value="thankyou.html">
                 
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-            
+
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-            
+
                 <div class="form-group">
                     <label for="message">Tell Us About Your Interest</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-            
+
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
+
+    <script>
+        // Check if form was submitted
+        if (window.location.search.includes('success=true')) {
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+            // Hide form
+            document.getElementById('contact-form').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
