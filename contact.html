@@ -142,24 +142,25 @@
     <main>
         <section class="contact-section">
             <h2>Contact Us</h2>
-            <form name="contact" netlify action="/thank-you.html">
+            <form name="contact" netlify action="thank-you.html">
                 <input type="hidden" name="form-name" value="contact">
+                <input type="hidden" name="success_url" value="thank-you.html">
                 
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="message">Tell Us About Your Interest</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-
+            
                 <button type="submit">Send Message</button>
             </form>
         </section>
