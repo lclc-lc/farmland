@@ -75,6 +75,19 @@
             margin-bottom: 3rem;
         }
 
+        /* Banner image style */
+        .banner-image {
+            width: 100%;
+            margin-bottom: 3rem;
+            padding: 0 70px;
+        }
+        
+        .banner-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
         .listings-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -188,6 +201,12 @@
     <main class="page-wrapper">
         <section id="listings">
             <h2 class="section-title">Featured Properties</h2>
+            
+            <!-- Added bird's eye view banner image -->
+            <div class="banner-image">
+                <img src="images/birdseye.png" alt="Bird's eye view of farmland">
+            </div>
+            
             <div class="listings-grid">
                 <div class="listing">
                     <img src="images/lenz-farm.png" alt="Lenz Farms" style="width: 100%; height: 250px; object-fit: contain; background-color: white; padding: 5px;">
