@@ -74,13 +74,21 @@
             padding: 0 70px;
         }
 
-        .property-header {
+        /* Updated floating title styles */
+        .floating-title {
+            position: sticky;
+            top: 90px; /* Position below the main header */
+            z-index: 900;
+            background-color: rgba(247, 250, 252, 0.9); /* Semi-transparent background */
+            padding: 1rem 0;
             margin-bottom: 2rem;
+            backdrop-filter: blur(5px); /* Creates a frosted glass effect */
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
 
-        .property-header h1 {
+        .floating-title h1 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            text-align: center;
         }
 
         /* Updated property image style to be larger and centered */
@@ -198,9 +206,9 @@
     <main class="page-wrapper">
         <section class="property-detail">
             <div class="property-container">
-                <div class="property-header">
+                <!-- Floating title that remains visible while scrolling -->
+                <div class="floating-title">
                     <h1>Lenz Farms</h1>
-                    <p>Premium farmland in Fremont County, Idaho</p>
                 </div>
 
                 <!-- Updated image to be larger and centered -->
