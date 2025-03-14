@@ -117,38 +117,22 @@
             font-family: 'EB Garamond', serif;
             color: black;
             padding: 1.5rem 0; /* Removed side padding */
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        /* Parcel info styling */
+        .parcel-info {
+            font-family: 'EB Garamond', serif;
+            color: black;
             margin-bottom: 2rem;
             font-size: 1.2rem;
             line-height: 1.7;
         }
 
-        /* Parcel table styling - updated for black and Garamond */
-        .parcel-table {
-            width: 100%;
-            margin-bottom: 2rem;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            font-family: 'EB Garamond', serif;
-        }
-
-        .parcel-table th {
-            background-color: #f5f5f5; /* Light gray instead of blue */
-            color: black;
-            padding: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .parcel-table td {
-            padding: 0.8rem;
-            text-align: center;
-            border-bottom: 1px solid #e2e8f0;
-            font-family: monospace;
-            font-size: 1.1rem;
-            color: black;
+        .parcel-info strong {
+            font-weight: bold;
         }
 
         /* Property description - updated for black and Garamond */
@@ -233,20 +217,10 @@
                     Located to the north of Saint Anthony, The Lenz Farm fields represent 1,016 acres which include 635 pivot-irrigated acres with 438 acres of fenced-livestock pasture.
                 </div>
 
-                <!-- Added table for Fremont County Parcels - updated styling -->
-                <table class="parcel-table">
-                    <thead>
-                        <tr>
-                            <th>Fremont County Parcels</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>RP08N40E270003</td></tr>
-                        <tr><td>RP08N40E234800</td></tr>
-                        <tr><td>RP08N40E250002</td></tr>
-                        <tr><td>RP08N40E260002</td></tr>
-                    </tbody>
-                </table>
+                <!-- Parcel information line with commas instead of table -->
+                <div class="parcel-info">
+                    <strong>Fremont County Parcels:</strong> RP08N40E270003, RP08N40E234800, RP08N40E250002, RP08N40E260002
+                </div>
 
                 <!-- Property description - now black and Garamond -->
                 <div class="property-description">
