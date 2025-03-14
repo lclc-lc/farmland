@@ -83,17 +83,24 @@
             margin-bottom: 1rem;
         }
 
-        /* Updated property image style to show full image without cropping */
+        /* Updated property image style to be larger and centered */
         .property-image {
             margin-bottom: 2rem;
+            text-align: center; /* Ensure the image is centered */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .property-image img {
-            width: 100%;
-            object-fit: contain; /* Changed from cover to contain to prevent cropping */
-            border-radius: 8px;
-            background-color: white; /* Adding white background for the image */
-            max-height: 500px; /* Setting a max height but allowing it to scale proportionally */
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            min-height: 600px; /* Making the image larger */
+            max-height: 700px; /* Setting a max height but allowing it to scale proportionally */
+            object-fit: contain;
+            display: block;
+            margin: 0 auto; /* Ensure the image is centered within its container */
         }
 
         /* Added property summary styling */
@@ -106,6 +113,32 @@
             font-size: 1.1rem;
             line-height: 1.7;
             text-align: center;
+        }
+
+        /* Parcel table styling */
+        .parcel-table {
+            width: 100%;
+            margin-bottom: 2rem;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .parcel-table th {
+            background-color: #2c5282;
+            color: white;
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .parcel-table td {
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            font-family: monospace;
+            font-size: 1.1rem;
         }
 
         /* Property description now takes full width */
@@ -170,17 +203,32 @@
                     <p>Premium farmland in Fremont County, Idaho</p>
                 </div>
 
-                <!-- Updated image to prevent cropping -->
+                <!-- Updated image to be larger and centered -->
                 <div class="property-image">
                     <img src="images/lenz-farm.png" alt="Lenz Farms main view">
                 </div>
 
-                <!-- Added property summary text block -->
+                <!-- Property summary text block -->
                 <div class="property-summary">
                     Located to the north of Saint Anthony, The Lenz Farm fields represent 1,016 acres which include 635 pivot-irrigated acres with 438 acres of fenced-livestock pasture.
                 </div>
 
-                <!-- Removed the grid layout and Property Details column -->
+                <!-- Added table for Fremont County Parcels -->
+                <table class="parcel-table">
+                    <thead>
+                        <tr>
+                            <th>Fremont County Parcels</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>RP08N40E270003</td></tr>
+                        <tr><td>RP08N40E234800</td></tr>
+                        <tr><td>RP08N40E250002</td></tr>
+                        <tr><td>RP08N40E260002</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Property description -->
                 <div class="property-description">
                     <h2>Property Overview</h2>
                     <p>Lenz Farms represents a premier agricultural investment opportunity in the heart of Idaho's productive farmland region. Located near Saint Anthony in Fremont County, this exceptional property features:</p>
