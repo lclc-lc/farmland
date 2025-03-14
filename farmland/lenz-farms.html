@@ -146,10 +146,21 @@
             font-weight: normal; /* Ensuring it's not bold */
         }
 
+        /* Water rights section */
+        .water-rights {
+            margin: 2rem 0;
+        }
+
+        .water-rights h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: 'EB Garamond', serif;
+            color: black;
+        }
+
         /* Water rights table styling */
         .water-rights-table {
             width: 100%;
-            margin: 2rem 0;
             border-collapse: collapse;
             font-family: 'EB Garamond', serif;
             color: black;
@@ -159,13 +170,34 @@
         .water-rights-table th, 
         .water-rights-table td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px 20px; /* Increased padding for better spacing */
             text-align: center;
         }
 
         .water-rights-table th:first-child,
         .water-rights-table td:first-child {
             text-align: left; /* Left align first column */
+            width: 15%; /* Adjust width of first column */
+        }
+
+        .water-rights-table th:nth-child(2),
+        .water-rights-table td:nth-child(2) {
+            width: 25%; /* Adjust width of second column */
+        }
+
+        .water-rights-table th:nth-child(3),
+        .water-rights-table td:nth-child(3) {
+            width: 20%; /* Adjust width of third column */
+        }
+
+        .water-rights-table th:nth-child(4),
+        .water-rights-table td:nth-child(4) {
+            width: 15%; /* Adjust width of fourth column */
+        }
+
+        .water-rights-table th:nth-child(5),
+        .water-rights-table td:nth-child(5) {
+            width: 25%; /* Adjust width of fifth column */
         }
 
         .water-rights-table th {
@@ -244,85 +276,72 @@
                     <!-- Parcel information - double spaced and not bolded -->
                     <p class="parcel-info">Fremont County Parcels: RP08N40E270003, RP08N40E234800, RP08N40E250002, RP08N40E260002</p>
                     
-                    <!-- Water Rights Table -->
-                    <table class="water-rights-table">
-                        <thead>
-                            <tr>
-                                <th>Field</th>
-                                <th>Water Right</th>
-                                <th>Priority Date</th>
-                                <th>CFS</th>
-                                <th>Pivot</th>
-                                <th>Pump</th>
-                                <th>Static Water</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Lenz 1</td>
-                                <td>21-7033</td>
-                                <td>10/15/73</td>
-                                <td>2.85</td>
-                                <td>8-Tower Valley Center</td>
-                                <td>150 HP w/VFD</td>
-                                <td>171'</td>
-                            </tr>
-                            <tr>
-                                <td>Lenz 1</td>
-                                <td>21-10930</td>
-                                <td>01/01/75</td>
-                                <td>0.60</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Lenz 2</td>
-                                <td>21-7104</td>
-                                <td>02/16/77</td>
-                                <td>2.29</td>
-                                <td>10-Tower Valley Center with Corner System</td>
-                                <td>150 HP</td>
-                                <td>181'</td>
-                            </tr>
-                            <tr>
-                                <td>Lenz 2</td>
-                                <td>21-13132</td>
-                                <td>09/13/77</td>
-                                <td>0.44</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Lenz 3</td>
-                                <td>21-7170</td>
-                                <td>05/29/79</td>
-                                <td>2.44</td>
-                                <td>10-Tower Valley Center</td>
-                                <td>150 HP</td>
-                                <td>160'</td>
-                            </tr>
-                            <tr>
-                                <td>Lenz 4</td>
-                                <td>21-7194</td>
-                                <td>03/25/80</td>
-                                <td>2.57</td>
-                                <td>7-Tower Zimmatic Center</td>
-                                <td>100 HP</td>
-                                <td>150'</td>
-                            </tr>
-                            <tr>
-                                <td>Lenz 6</td>
-                                <td>Last Chance Canal Shares</td>
-                                <td>-</td>
-                                <td>62.77</td>
-                                <td>7-Tower Valley Center</td>
-                                <td>30 HP</td>
-                                <td>Surface</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- Water Rights Section with header -->
+                    <div class="water-rights">
+                        <h3>Secure Water Rights</h3>
+                        <table class="water-rights-table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Water Right</th>
+                                    <th>Priority Date</th>
+                                    <th>CFS</th>
+                                    <th>Static Water</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lenz 1</td>
+                                    <td>21-7033</td>
+                                    <td>10/15/73</td>
+                                    <td>2.85</td>
+                                    <td>171'</td>
+                                </tr>
+                                <tr>
+                                    <td>Lenz 1</td>
+                                    <td>21-10930</td>
+                                    <td>01/01/75</td>
+                                    <td>0.60</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Lenz 2</td>
+                                    <td>21-7104</td>
+                                    <td>02/16/77</td>
+                                    <td>2.29</td>
+                                    <td>181'</td>
+                                </tr>
+                                <tr>
+                                    <td>Lenz 2</td>
+                                    <td>21-13132</td>
+                                    <td>09/13/77</td>
+                                    <td>0.44</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Lenz 3</td>
+                                    <td>21-7170</td>
+                                    <td>05/29/79</td>
+                                    <td>2.44</td>
+                                    <td>160'</td>
+                                </tr>
+                                <tr>
+                                    <td>Lenz 4</td>
+                                    <td>21-7194</td>
+                                    <td>03/25/80</td>
+                                    <td>2.57</td>
+                                    <td>150'</td>
+                                </tr>
+                                <tr>
+                                    <td>Lenz 6</td>
+                                    <td>Last Chance Canal Shares</td>
+                                    <td>-</td>
+                                    <td>62.77</td>
+                                    <td>Surface</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     
                     <h2 style="margin-top: 2rem;">Investment Opportunity</h2>
                     <p>Lenz Farms provides not only immediate agricultural returns but also long-term appreciation potential as Idaho farmland continues to be recognized for its value and productivity. The diverse water rights portfolio provides security in changing climate conditions.</p>
