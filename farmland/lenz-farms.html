@@ -83,58 +83,31 @@
             margin-bottom: 1rem;
         }
 
-        /* Updated property image style to span full width */
+        /* Updated property image style to show full image without cropping */
         .property-image {
             margin-bottom: 2rem;
         }
 
         .property-image img {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
+            object-fit: contain; /* Changed from cover to contain to prevent cropping */
             border-radius: 8px;
+            background-color: white; /* Adding white background for the image */
+            max-height: 500px; /* Setting a max height but allowing it to scale proportionally */
         }
 
-        .property-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-        }
-
+        /* Property description now takes full width */
         .property-description {
             background: white;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            width: 100%;
         }
 
         .property-description h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-        }
-
-        .property-meta {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .property-meta h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .meta-item {
-            display: flex;
-            margin-bottom: 1rem;
-            align-items: center;
-        }
-
-        .meta-item i {
-            margin-right: 1rem;
-            font-size: 1.2rem;
-            color: #2c5282;
         }
 
         .back-button {
@@ -185,101 +158,38 @@
                     <p>Premium farmland in Fremont County, Idaho</p>
                 </div>
 
-                <!-- Updated image section to single full-width image -->
+                <!-- Updated image to prevent cropping -->
                 <div class="property-image">
                     <img src="images/lenz-farm.png" alt="Lenz Farms main view">
                 </div>
 
-                <div class="property-content">
-                    <div class="property-description">
-                        <h2>Property Overview</h2>
-                        <p>Lenz Farms represents a premier agricultural investment opportunity in the heart of Idaho's productive farmland region. Located near Saint Anthony in Fremont County, this exceptional property features:</p>
-                        <ul style="margin: 1rem 0 1rem 2rem;">
-                            <li>5 fully operational pivot irrigation systems</li>
-                            <li>635 acres of prime irrigated farmland</li>
-                            <li>380 acres of grazing land</li>
-                            <li>Reliable water rights from both surface and groundwater sources</li>
-                            <li>Excellent soil quality ideal for potato, grain, and hay production</li>
-                            <li>Strategic location with good access to markets and transportation</li>
-                        </ul>
-                        
-                        <p>This property has been meticulously maintained and offers the perfect balance of established infrastructure and potential for increased productivity under new ownership.</p>
-                        
-                        <h2 style="margin-top: 2rem;">Investment Opportunity</h2>
-                        <p>Lenz Farms provides not only immediate agricultural returns but also long-term appreciation potential as Idaho farmland continues to be recognized for its value and productivity. The diverse water rights portfolio provides security in changing climate conditions.</p>
-                        
-                        <h2 style="margin-top: 2rem;">Acquisition Timeline</h2>
-                        <p>We will begin accepting offers for this premium property in Spring 2025. Qualified buyers are encouraged to schedule a property tour prior to the offering period.</p>
-                        
-                        <a href="contact.html" class="back-button">Request Information</a>
-                        <a href="index.html" class="back-button" style="background-color: #4a5568; margin-left: 1rem;">Back to All Properties</a>
-                    </div>
-
-                    <div class="property-meta">
-                        <h3>Property Details</h3>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Location:</strong>
-                                <p>Fremont County, near Saint Anthony</p>
-                            </div>
-                        </div>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-ruler-combined"></i>
-                            <div>
-                                <strong>Total Acreage:</strong>
-                                <p>1,015 acres</p>
-                            </div>
-                        </div>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-tint"></i>
-                            <div>
-                                <strong>Irrigated Land:</strong>
-                                <p>635 acres</p>
-                            </div>
-                        </div>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-mountain"></i>
-                            <div>
-                                <strong>Grazing Land:</strong>
-                                <p>380 acres</p>
-                            </div>
-                        </div>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-water"></i>
-                            <div>
-                                <strong>Water Rights:</strong>
-                                <p>Surface & Groundwater</p>
-                            </div>
-                        </div>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-seedling"></i>
-                            <div>
-                                <strong>Soil Types:</strong>
-                                <p>Sandy loam, Volcanic ash loam</p>
-                            </div>
-                        </div>
-                        
-                        <div class="meta-item">
-                            <i class="fas fa-tractor"></i>
-                            <div>
-                                <strong>Infrastructure:</strong>
-                                <p>5 center pivot systems</p>
-                                <p>Grain storage facilities</p>
-                                <p>Equipment shed</p>
-                            </div>
-                        </div>
-                        
-                        <h3 style="margin-top: 2rem;">Contact</h3>
-                        <p>For more information about this property:</p>
-                        <p style="margin-top: 0.5rem;"><a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #2c5282; text-decoration: underline;">IdahoFarmlandForSale@gmail.com</a></p>
-                    </div>
+                <!-- Removed the grid layout and Property Details column -->
+                <div class="property-description">
+                    <h2>Property Overview</h2>
+                    <p>Lenz Farms represents a premier agricultural investment opportunity in the heart of Idaho's productive farmland region. Located near Saint Anthony in Fremont County, this exceptional property features:</p>
+                    <ul style="margin: 1rem 0 1rem 2rem;">
+                        <li>5 fully operational pivot irrigation systems</li>
+                        <li>635 acres of prime irrigated farmland</li>
+                        <li>380 acres of grazing land</li>
+                        <li>Reliable water rights from both surface and groundwater sources</li>
+                        <li>Excellent soil quality ideal for potato, grain, and hay production</li>
+                        <li>Strategic location with good access to markets and transportation</li>
+                    </ul>
+                    
+                    <p>This property has been meticulously maintained and offers the perfect balance of established infrastructure and potential for increased productivity under new ownership.</p>
+                    
+                    <h2 style="margin-top: 2rem;">Investment Opportunity</h2>
+                    <p>Lenz Farms provides not only immediate agricultural returns but also long-term appreciation potential as Idaho farmland continues to be recognized for its value and productivity. The diverse water rights portfolio provides security in changing climate conditions.</p>
+                    
+                    <h2 style="margin-top: 2rem;">Acquisition Timeline</h2>
+                    <p>We will begin accepting offers for this premium property in Spring 2025. Qualified buyers are encouraged to schedule a property tour prior to the offering period.</p>
+                    
+                    <h2 style="margin-top: 2rem;">Contact Information</h2>
+                    <p>For more information about this property or to schedule a viewing, please contact us at:</p>
+                    <p style="margin-top: 0.5rem;"><a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #2c5282; text-decoration: underline;">IdahoFarmlandForSale@gmail.com</a></p>
+                    
+                    <a href="contact.html" class="back-button">Request Information</a>
+                    <a href="index.html" class="back-button" style="background-color: #4a5568; margin-left: 1rem;">Back to All Properties</a>
                 </div>
             </div>
         </section>
