@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lenz Farms - Idaho Farmland For Sale</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -74,7 +75,7 @@
             padding: 0 70px;
         }
 
-        /* Updated floating title styles */
+        /* Updated floating title styles - left aligned */
         .floating-title {
             position: sticky;
             top: 90px; /* Position below the main header */
@@ -88,7 +89,7 @@
 
         .floating-title h1 {
             font-size: 2.5rem;
-            text-align: center;
+            text-align: left; /* Left aligned title */
         }
 
         /* Updated property image style to be larger and centered */
@@ -111,19 +112,17 @@
             margin: 0 auto; /* Ensure the image is centered within its container */
         }
 
-        /* Added property summary styling */
+        /* Updated property summary styling - black and Garamond */
         .property-summary {
-            background: #2c5282;
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
+            font-family: 'EB Garamond', serif;
+            color: black;
+            padding: 1.5rem 0; /* Removed side padding */
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.7;
-            text-align: center;
         }
 
-        /* Parcel table styling */
+        /* Parcel table styling - updated for black and Garamond */
         .parcel-table {
             width: 100%;
             margin-bottom: 2rem;
@@ -132,13 +131,15 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-family: 'EB Garamond', serif;
         }
 
         .parcel-table th {
-            background-color: #2c5282;
-            color: white;
+            background-color: #f5f5f5; /* Light gray instead of blue */
+            color: black;
             padding: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         .parcel-table td {
@@ -147,20 +148,30 @@
             border-bottom: 1px solid #e2e8f0;
             font-family: monospace;
             font-size: 1.1rem;
+            color: black;
         }
 
-        /* Property description now takes full width */
+        /* Property description - updated for black and Garamond */
         .property-description {
             background: white;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             width: 100%;
+            font-family: 'EB Garamond', serif;
+            color: black;
         }
 
         .property-description h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            font-family: 'EB Garamond', serif;
+            color: black;
+        }
+
+        .property-description p, 
+        .property-description li {
+            font-size: 1.2rem;
         }
 
         .back-button {
@@ -173,6 +184,7 @@
             margin-top: 2rem;
             font-weight: 500;
             transition: background-color 0.3s;
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Keep buttons in original font */
         }
 
         .back-button:hover {
@@ -206,7 +218,7 @@
     <main class="page-wrapper">
         <section class="property-detail">
             <div class="property-container">
-                <!-- Floating title that remains visible while scrolling -->
+                <!-- Floating title that remains visible while scrolling - now left-aligned -->
                 <div class="floating-title">
                     <h1>Lenz Farms</h1>
                 </div>
@@ -216,12 +228,12 @@
                     <img src="images/lenz-farm.png" alt="Lenz Farms main view">
                 </div>
 
-                <!-- Property summary text block -->
+                <!-- Property summary text block - now black and Garamond -->
                 <div class="property-summary">
                     Located to the north of Saint Anthony, The Lenz Farm fields represent 1,016 acres which include 635 pivot-irrigated acres with 438 acres of fenced-livestock pasture.
                 </div>
 
-                <!-- Added table for Fremont County Parcels -->
+                <!-- Added table for Fremont County Parcels - updated styling -->
                 <table class="parcel-table">
                     <thead>
                         <tr>
@@ -236,7 +248,7 @@
                     </tbody>
                 </table>
 
-                <!-- Property description -->
+                <!-- Property description - now black and Garamond -->
                 <div class="property-description">
                     <h2>Property Overview</h2>
                     <p>Lenz Farms represents a premier agricultural investment opportunity in the heart of Idaho's productive farmland region. Located near Saint Anthony in Fremont County, this exceptional property features:</p>
