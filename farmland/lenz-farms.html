@@ -130,8 +130,7 @@
             color: black;
         }
 
-        .property-content p, 
-        .property-content li {
+        .property-content p {
             font-size: 1.2rem;
         }
 
@@ -145,6 +144,39 @@
             font-size: 1.2rem;
             line-height: 1.7;
             font-weight: normal; /* Ensuring it's not bold */
+        }
+
+        /* Water rights table styling */
+        .water-rights-table {
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: collapse;
+            font-family: 'EB Garamond', serif;
+            color: black;
+            font-size: 1.1rem;
+        }
+
+        .water-rights-table th, 
+        .water-rights-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .water-rights-table th:first-child,
+        .water-rights-table td:first-child {
+            text-align: left; /* Left align first column */
+        }
+
+        .water-rights-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .water-rights-table tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
 
         .back-button {
@@ -212,18 +244,85 @@
                     <!-- Parcel information - double spaced and not bolded -->
                     <p class="parcel-info">Fremont County Parcels: RP08N40E270003, RP08N40E234800, RP08N40E250002, RP08N40E260002</p>
                     
-                    <!-- Features list -->
-                    <p>This exceptional property features:</p>
-                    <ul style="margin: 1rem 0 1rem 2rem;">
-                        <li>5 fully operational pivot irrigation systems</li>
-                        <li>635 acres of prime irrigated farmland</li>
-                        <li>380 acres of grazing land</li>
-                        <li>Reliable water rights from both surface and groundwater sources</li>
-                        <li>Excellent soil quality ideal for potato, grain, and hay production</li>
-                        <li>Strategic location with good access to markets and transportation</li>
-                    </ul>
-                    
-                    <p>This property has been meticulously maintained and offers the perfect balance of established infrastructure and potential for increased productivity under new ownership.</p>
+                    <!-- Water Rights Table -->
+                    <table class="water-rights-table">
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Water Right</th>
+                                <th>Priority Date</th>
+                                <th>CFS</th>
+                                <th>Pivot</th>
+                                <th>Pump</th>
+                                <th>Static Water</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lenz 1</td>
+                                <td>21-7033</td>
+                                <td>10/15/73</td>
+                                <td>2.85</td>
+                                <td>8-Tower Valley Center</td>
+                                <td>150 HP w/VFD</td>
+                                <td>171'</td>
+                            </tr>
+                            <tr>
+                                <td>Lenz 1</td>
+                                <td>21-10930</td>
+                                <td>01/01/75</td>
+                                <td>0.60</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Lenz 2</td>
+                                <td>21-7104</td>
+                                <td>02/16/77</td>
+                                <td>2.29</td>
+                                <td>10-Tower Valley Center with Corner System</td>
+                                <td>150 HP</td>
+                                <td>181'</td>
+                            </tr>
+                            <tr>
+                                <td>Lenz 2</td>
+                                <td>21-13132</td>
+                                <td>09/13/77</td>
+                                <td>0.44</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Lenz 3</td>
+                                <td>21-7170</td>
+                                <td>05/29/79</td>
+                                <td>2.44</td>
+                                <td>10-Tower Valley Center</td>
+                                <td>150 HP</td>
+                                <td>160'</td>
+                            </tr>
+                            <tr>
+                                <td>Lenz 4</td>
+                                <td>21-7194</td>
+                                <td>03/25/80</td>
+                                <td>2.57</td>
+                                <td>7-Tower Zimmatic Center</td>
+                                <td>100 HP</td>
+                                <td>150'</td>
+                            </tr>
+                            <tr>
+                                <td>Lenz 6</td>
+                                <td>Last Chance Canal Shares</td>
+                                <td>-</td>
+                                <td>62.77</td>
+                                <td>7-Tower Valley Center</td>
+                                <td>30 HP</td>
+                                <td>Surface</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     
                     <h2 style="margin-top: 2rem;">Investment Opportunity</h2>
                     <p>Lenz Farms provides not only immediate agricultural returns but also long-term appreciation potential as Idaho farmland continues to be recognized for its value and productivity. The diverse water rights portfolio provides security in changing climate conditions.</p>
