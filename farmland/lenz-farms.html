@@ -112,31 +112,8 @@
             margin: 0 auto; /* Ensure the image is centered within its container */
         }
 
-        /* Updated property summary styling - black and Garamond */
-        .property-summary {
-            font-family: 'EB Garamond', serif;
-            color: black;
-            padding: 1.5rem 0; /* Removed side padding */
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            line-height: 1.7;
-        }
-
-        /* Parcel info styling */
-        .parcel-info {
-            font-family: 'EB Garamond', serif;
-            color: black;
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-            line-height: 1.7;
-        }
-
-        .parcel-info strong {
-            font-weight: bold;
-        }
-
-        /* Property description - updated for black and Garamond */
-        .property-description {
+        /* Property content styling */
+        .property-content {
             background: white;
             padding: 2rem;
             border-radius: 8px;
@@ -146,16 +123,28 @@
             color: black;
         }
 
-        .property-description h2 {
+        .property-content h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
             font-family: 'EB Garamond', serif;
             color: black;
         }
 
-        .property-description p, 
-        .property-description li {
+        .property-content p, 
+        .property-content li {
             font-size: 1.2rem;
+        }
+
+        .property-overview {
+            margin-bottom: 1.5rem;
+        }
+
+        .parcel-info {
+            margin-top: 2rem; /* Double spacing */
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            font-weight: normal; /* Ensuring it's not bold */
         }
 
         .back-button {
@@ -212,20 +201,19 @@
                     <img src="images/lenz-farm.png" alt="Lenz Farms main view">
                 </div>
 
-                <!-- Property summary text block - now black and Garamond -->
-                <div class="property-summary">
-                    Located to the north of Saint Anthony, The Lenz Farm fields represent 1,016 acres which include 635 pivot-irrigated acres with 438 acres of fenced-livestock pasture.
-                </div>
-
-                <!-- Parcel information line with commas instead of table -->
-                <div class="parcel-info">
-                    <strong>Fremont County Parcels:</strong> RP08N40E270003, RP08N40E234800, RP08N40E250002, RP08N40E260002
-                </div>
-
-                <!-- Property description - now black and Garamond -->
-                <div class="property-description">
+                <!-- Property content with updated structure -->
+                <div class="property-content">
+                    <!-- First section with Property Overview -->
                     <h2>Property Overview</h2>
-                    <p>Lenz Farms represents a premier agricultural investment opportunity in the heart of Idaho's productive farmland region. Located near Saint Anthony in Fremont County, this exceptional property features:</p>
+                    <div class="property-overview">
+                        <p>Located to the north of Saint Anthony, The Lenz Farm fields represent 1,016 acres which include 635 pivot-irrigated acres with 438 acres of fenced-livestock pasture.</p>
+                    </div>
+                    
+                    <!-- Parcel information - double spaced and not bolded -->
+                    <p class="parcel-info">Fremont County Parcels: RP08N40E270003, RP08N40E234800, RP08N40E250002, RP08N40E260002</p>
+                    
+                    <!-- Features list -->
+                    <p>This exceptional property features:</p>
                     <ul style="margin: 1rem 0 1rem 2rem;">
                         <li>5 fully operational pivot irrigation systems</li>
                         <li>635 acres of prime irrigated farmland</li>
