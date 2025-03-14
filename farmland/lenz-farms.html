@@ -6,7 +6,6 @@
     <title>Lenz Farms - Idaho Farmland For Sale</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Copy your existing styles from index.html */
         * {
             margin: 0;
             padding: 0;
@@ -84,33 +83,14 @@
             margin-bottom: 1rem;
         }
 
-        .property-images {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 1rem;
+        /* Updated property image style to span full width */
+        .property-image {
             margin-bottom: 2rem;
         }
 
-        .main-image {
+        .property-image img {
+            width: 100%;
             height: 400px;
-        }
-
-        .main-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .image-grid img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
             border-radius: 8px;
         }
@@ -205,14 +185,9 @@
                     <p>Premium farmland in Fremont County, Idaho</p>
                 </div>
 
-                <div class="property-images">
-                    <div class="main-image">
-                        <img src="images/lenz-farm.png" alt="Lenz Farms main view">
-                    </div>
-                    <div class="image-grid">
-                        <img src="images/birdseye.png" alt="Aerial view of Lenz Farms">
-                        <img src="images/wheat-field.jpg" alt="Wheat fields at Lenz Farms">
-                    </div>
+                <!-- Updated image section to single full-width image -->
+                <div class="property-image">
+                    <img src="images/lenz-farm.png" alt="Lenz Farms main view">
                 </div>
 
                 <div class="property-content">
