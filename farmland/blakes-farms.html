@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blakes Farms - Idaho Farmland For Sale</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f7fafc;
+        }
+
+        /* Set up a consistent container for alignment */
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('images/wheat-field.jpg');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Property detail styles */
+        .property-detail {
+            padding-top: 120px;
+            padding-bottom: 50px;
+        }
+
+        .property-container {
+            padding: 0 70px;
+        }
+
+        /* Updated floating title styles - left aligned */
+        .floating-title {
+            position: sticky;
+            top: 90px; /* Position below the main header */
+            z-index: 900;
+            background-color: rgba(247, 250, 252, 0.9); /* Semi-transparent background */
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(5px); /* Creates a frosted glass effect */
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .floating-title h1 {
+            font-size: 2.5rem;
+            text-align: left; /* Left aligned title */
+        }
+
+        /* Updated property image style to be larger and centered */
+        .property-image {
+            margin-bottom: 2rem;
+            text-align: center; /* Ensure the image is centered */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            min-height: 600px; /* Making the image larger */
+            max-height: 700px; /* Setting a max height but allowing it to scale proportionally */
+            object-fit: contain;
+            display: block;
+            margin: 0 auto; /* Ensure the image is centered within its container */
+        }
+
+        /* Property content styling */
+        .property-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            width: 100%;
+            font-family: 'EB Garamond', serif;
+            color: black;
+        }
+
+        .property-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-family: 'EB Garamond', serif;
+            color: black;
+        }
+
+        .property-content p {
+            font-size: 1.2rem;
+        }
+
+        .property-overview {
+            margin-bottom: 1.5rem;
+        }
+
+        .parcel-info {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            font-weight: normal; /* Ensuring it's not bold */
+        }
+
+        /* Section styling */
+        .section {
+            margin: 2rem 0;
+        }
+
+        .section h2 {
+            font-size: 1.8rem; /* Same size as Property Overview */
+            margin-bottom: 1rem;
+            font-family: 'EB Garamond', serif;
+            color: black;
+        }
+
+        /* Map images styling */
+        .map-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .map-image {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .map-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .single-map {
+            width: 100%;
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .single-map img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Table styling for both tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'EB Garamond', serif;
+            color: black;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .data-table th, 
+        .data-table td {
+            border: 1px solid #ddd;
+            padding: 12px 20px; /* Increased padding for better spacing */
+            text-align: center;
+        }
+
+        .data-table th:first-child,
+        .data-table td:first-child {
+            text-align: left; /* Left align first column */
+        }
+
+        .data-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #2c5282;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 2rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Keep buttons in original font */
+        }
+
+        .back-button:hover {
+            background-color: #1a365d;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="page-wrapper">
+            <div class="header-inner">
+                <div class="logo">Idaho Farmland For Sale</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#listings">Properties</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-wrapper">
+        <section class="property-detail">
+            <div class="property-container">
+                <!-- Floating title that remains visible while scrolling - now left-aligned -->
+                <div class="floating-title">
+                    <h1>Blakes Farms</h1>
+                </div>
+
+                <!-- Updated image to be larger and centered -->
+                <div class="property-image">
+                    <img src="images/blakes-farm.png" alt="Blakes Farms main view">
+                </div>
+
+                <!-- Property content with updated structure -->
+                <div class="property-content">
+                    <!-- First section with Property Overview -->
+                    <h2>Property Overview</h2>
+                    <div class="property-overview">
+                        <p>Located north of Saint Anthony, Blakes Farms offers 264 acres of prime irrigated farmland with two well-maintained pivot irrigation systems ideal for potato and grain production.</p>
+                    </div>
+                    
+                    <!-- Added separate Fremont County Parcels section -->
+                    <h2>Fremont County Parcels</h2>
+                    <p class="parcel-info">RP08N39E219001, RP08N39E251150</p>
+                    
+                    <!-- Water Rights Section -->
+                    <div class="section">
+                        <h2>Early &amp; Secure Water Rights</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Water Right</th>
+                                    <th>Priority Date</th>
+                                    <th>CFS</th>
+                                    <th>Static Water</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Blakes 1</td>
+                                    <td>21-7452</td>
+                                    <td>06/03/75</td>
+                                    <td>2.24</td>
+                                    <td>165'</td>
+                                </tr>
+                                <tr>
+                                    <td>Blakes 1</td>
+                                    <td>21-13048</td>
+                                    <td>09/15/76</td>
+                                    <td>0.38</td>
+                                    <td>165'</td>
+                                </tr>
+                                <tr>
+                                    <td>Blakes 2</td>
+                                    <td>21-7510</td>
+                                    <td>07/12/76</td>
+                                    <td>2.18</td>
+                                    <td>170'</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Irrigation Systems Section -->
+                    <div class="section">
+                        <h2>Well-Maintained Irrigation Systems</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Pivot</th>
+                                    <th>Pump</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Blakes 1</td>
+                                    <td>7-Tower Valley Center</td>
+                                    <td>125 HP</td>
+                                </tr>
+                                <tr>
+                                    <td>Blakes 2</td>
+                                    <td>8-Tower Zimmatic Center</td>
+                                    <td>125 HP</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- FSA Maps Section -->
+                    <div class="section">
+                        <h2>Blakes Irrigated Land Per FSA</h2>
+                        <div class="single-map">
+                            <img src="images/birdseye.png" alt="Blakes Farms FSA Map">
+                        </div>
+                    </div>
+                    
+                    <!-- Soils Map Section -->
+                    <div class="section">
+                        <h2>Fertile Soils for Cash Crops</h2>
+                        <p style="margin-bottom: 1rem;">The Blakes Farms property consists primarily of Rexburg-Ririe complex and Bannock sandy loam soils, which are ideal for potato rotation with grains and other crops. These well-draining soils have consistently produced above-average yields for the region.</p>
+                    </div>
+                    
+                    <h2>Investment Opportunity</h2>
+                    <p>Blakes Farms represents an excellent opportunity for farm expansion or investment. The property features:</p>
+                    <ul style="margin: 1rem 0 1rem 2rem; font-family: 'EB Garamond', serif; font-size: 1.2rem;">
+                        <li>Close proximity to multiple potato processing facilities</li>
+                        <li>Excellent access via county-maintained roads</li>
+                        <li>Reliable early-priority water rights</li>
+                        <li>Well-maintained equipment with recent upgrades</li>
+                        <li>Proven production history for potatoes, wheat, and barley</li>
+                    </ul>
+                    <p>This carefully maintained operation offers turn-key potential for the next owner to continue the farm's history of successful production.</p>
+                    
+                    <h2 style="margin-top: 2rem;">Timeline</h2>
+                    <p>We will begin accepting offers for this premium property in Spring 2025. Qualified buyers are encouraged to schedule a property tour prior to the offering period.</p>
+                    
+                    <h2 style="margin-top: 2rem;">Contact Information</h2>
+                    <p>For more information about this property or to schedule a viewing, please contact us at:</p>
+                    <p style="margin-top: 0.5rem;"><a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #2c5282; text-decoration: underline;">IdahoFarmlandForSale@gmail.com</a></p>
+                    
+                    <a href="contact.html" class="back-button">Request Information</a>
+                    <a href="index.html" class="back-button" style="background-color: #4a5568; margin-left: 1rem;">Back to All Properties</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="page-wrapper">
+            <!-- Footer content -->
+        </div>
+    </footer>
+</body>
+</html>
