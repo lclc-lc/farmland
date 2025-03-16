@@ -76,17 +76,25 @@
         }
 
         /* Banner image style */
-        .banner-image {
-            width: 100%;
-            margin-bottom: 3rem;
-            padding: 0 70px;
-        }
-        
-        .banner-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+.banner-image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 0 70px;
+    max-width: 100%;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Image map styles */
+area {
+    cursor: pointer;
+}
 
         .listings-grid {
             display: grid;
@@ -209,13 +217,13 @@
     <img src="images/birdseye.png" alt="Bird's eye view of farmland" usemap="#farm-map">
     <map name="farm-map">
         <!-- Lenz Farms clickable area -->
-        <area shape="rect" coords="665,380,798,410" href="lenz-farms.html" alt="Lenz Farms">
+        <area shape="rect" coords="906,490,1486,630" href="lenz-farms.html" alt="Lenz Farms" title="View Lenz Farms Details">
         
         <!-- Blakes Farms clickable area -->
-        <area shape="rect" coords="1023,65,1173,95" href="blakes-farms.html" alt="Blakes Farms">
+        <area shape="rect" coords="1396,68,1790,152" href="blakes-farms.html" alt="Blakes Farms" title="View Blakes Farms Details">
         
         <!-- Liston Farms clickable area -->
-        <area shape="rect" coords="90,790,233,820" href="liston-farms.html" alt="Liston Farms">
+        <area shape="rect" coords="20,1062,336,1130" href="liston-farms.html" alt="Liston Farms" title="View Liston Farms Details">
     </map>
 </div>
             
