@@ -204,10 +204,20 @@
         <section id="listings">
             <h2 class="section-title">Featured Properties</h2>
             
-            <!-- Added bird's eye view banner image -->
-            <div class="banner-image">
-                <img src="images/birdseye.png" alt="Bird's eye view of farmland">
-            </div>
+            <!-- Added bird's eye view banner image with clickable areas -->
+<div class="banner-image">
+    <img src="images/birdseye.png" alt="Bird's eye view of farmland" usemap="#farm-map">
+    <map name="farm-map">
+        <!-- Lenz Farms clickable area -->
+        <area shape="rect" coords="665,380,798,410" href="lenz-farms.html" alt="Lenz Farms">
+        
+        <!-- Blakes Farms clickable area -->
+        <area shape="rect" coords="1023,65,1173,95" href="blakes-farms.html" alt="Blakes Farms">
+        
+        <!-- Liston Farms clickable area -->
+        <area shape="rect" coords="90,790,233,820" href="liston-farms.html" alt="Liston Farms">
+    </map>
+</div>
             
             <div class="listings-grid">
                 <div class="listing">
