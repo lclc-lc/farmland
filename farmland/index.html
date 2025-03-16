@@ -213,21 +213,15 @@ area {
             <h2 class="section-title">Featured Properties</h2>
             
             <!-- Added bird's eye view banner image with clickable areas -->
-            <div class="banner-image">
-                <img src="images/birdseye.png" alt="Bird's eye view of farmland" usemap="#farm-map">
-                <map name="farm-map">
-                    <!-- Test area covering the entire image -->
-                    <area shape="rect" coords="0,0,2000,2000" href="index.html" alt="Test Area">
-                    
-                    <!-- Lenz Farms clickable area -->
-                    <area shape="rect" coords="906,490,1486,630" href="lenz-farms.html" alt="Lenz Farms" title="View Lenz Farms Details">
-                    
-                    <!-- Blakes Farms clickable area -->
-                    <area shape="rect" coords="1396,68,1790,152" href="blakes-farms.html" alt="Blakes Farms" title="View Blakes Farms Details">
-                    
-                    <!-- Liston Farms clickable area -->
-                    <area shape="rect" coords="20,1062,336,1130" href="liston-farms.html" alt="Liston Farms" title="View Liston Farms Details">
-                </map>
+            <div class="banner-image" style="position: relative;">
+                <img src="images/birdseye.png" alt="Bird's eye view of farmland">
+                
+                <!-- Clickable links positioned over each farm label -->
+                <a href="lenz-farms.html" style="position: absolute; left: 60%; top: 33%; transform: translate(-50%, -50%); border: 2px solid blue; background-color: white; color: blue; padding: 5px 10px; text-decoration: none; font-weight: bold;">Lenz Farms</a>
+                
+                <a href="blakes-farms.html" style="position: absolute; right: 15%; top: 7%; transform: translate(0, 0); border: 2px solid blue; background-color: white; color: blue; padding: 5px 10px; text-decoration: none; font-weight: bold;">Blakes Farms</a>
+                
+                <a href="liston-farms.html" style="position: absolute; left: 10%; bottom: 5%; transform: translate(0, 0); border: 2px solid blue; background-color: white; color: blue; padding: 5px 10px; text-decoration: none; font-weight: bold;">Liston Farms</a>
             </div>
             
             <div class="listings-grid">
