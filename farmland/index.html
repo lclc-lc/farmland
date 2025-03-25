@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium irrigated farmland for sale in Fremont County, Idaho featuring Liston Farms, Lenz Farms, and Blakes Farms with secure water rights, potato storage, and productive soils. Ideal for crop and livestock farming on Idaho's most fertile agricultural land.">
     <meta name="keywords" content="Idaho farmland, Fremont County farms, Saint Anthony farm property, irrigated farmland, potato farming Idaho, agricultural investment, water rights Idaho">
+    <!-- Add canonical tag -->
+    <link rel="canonical" href="https://idahofarmlandforsale.com/" />
     <title>Idaho Farmland For Sale | Prime Agricultural Properties in Fremont County</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -66,9 +68,28 @@
             font-size: 0.95rem;
         }
 
+        /* Hero section */
+        .hero-section {
+            padding-top: 120px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         /* Listings section */
         #listings {
-            padding-top: 100px;
+            padding-top: 40px;
         }
 
         .section-title {
@@ -201,6 +222,21 @@
             .banner-image, #about {
                 padding: 0 20px;
             }
+
+            .footer-center ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .page-wrapper [style*="display: flex"] {
+                flex-direction: column;
+            }
+
+            .footer-left, .footer-center, .footer-right {
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -221,10 +257,16 @@
     </header>
 
     <main class="page-wrapper">
+        <!-- Added a hero section with H1 heading -->
+        <section class="hero-section">
+            <h1>Premium Idaho Farmland For Sale</h1>
+            <p>Discover exceptional agricultural investment opportunities in Fremont County with secure water rights and proven productivity</p>
+        </section>
+
         <section id="listings">
             <h2 class="section-title">Featured Properties</h2>
             
-            <!-- Added bird's eye view banner image with clickable areas -->
+            <!-- Bird's eye view banner image with clickable areas -->
             <div class="banner-image" style="position: relative;">
                 <img src="images/birdseye.png" alt="Aerial view of Idaho farmland properties showing Liston, Lenz, and Blakes Farms in Fremont County" title="Fremont County Premium Farmland Properties">
                 
@@ -308,11 +350,15 @@
         </section>
 
         <section id="about">
-            <h2>Farm Investments</h2>
+            <h2>Farm Investments in Eastern Idaho</h2>
             <div class="about-text">
                 <p>Idaho farmland represents a special opportunity to invest in our agricultural future. These premium properties offer established water rights, proven productivity, and the potential for generational value.</p>
                 <br>
                 <p>We believe family farms are the backbone of Idaho agriculture. Whether you're expanding existing operations or establishing a new legacy, these properties provide the foundation for sustainable farming success.</p>
+                <br>
+                <p>Fremont County farmland is known for its exceptional growing conditions, with rich volcanic soils ideal for potato production, grain crops, and hay. The area benefits from reliable irrigation sources, including both surface water and groundwater rights, providing security even during drier seasons.</p>
+                <br>
+                <p>Saint Anthony and the surrounding Fremont County area offer the perfect balance of productive farmland with proximity to agricultural markets, processing facilities, and transportation corridors.</p>
                 <br>
                 <p>Feel free to contact <a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #2c5282; text-decoration: underline;">IdahoFarmlandForSale@gmail.com</a> for more information or respond on our Contact page.</p>
             </div>
@@ -338,6 +384,7 @@
             </div>
             <div class="footer-right">
                 <div style="margin-bottom: 1rem;">
+                    <a href="#" style="color: #e2e8f0; margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
                     <a href="#" style="color: #e2e8f0; margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
                     <a href="#" style="color: #e2e8f0; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
                 </div>
@@ -346,7 +393,7 @@
         </div>
     </footer>
     
-    <!-- Schema markup for better SEO -->
+    <!-- Enhanced Schema markup for better SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -365,7 +412,54 @@
         "@type": "GeoCoordinates",
         "latitude": "43.9654",
         "longitude": "-111.6822"
-      }
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "LandProperty",
+            "name": "Liston Farms",
+            "description": "84-acre property with 3 pivot systems, 78 irrigated acres, and 120,000 cwt potato cellar on Egin Bench",
+            "url": "https://idahofarmlandforsale.com/liston-farms.html",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Saint Anthony",
+              "addressRegion": "ID",
+              "addressCountry": "US"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "LandProperty",
+            "name": "Lenz Farms",
+            "description": "1,016-acre property with 5 pivot systems, 635 irrigated acres, and 380 acres grazing near Saint Anthony",
+            "url": "https://idahofarmlandforsale.com/lenz-farms.html",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Saint Anthony",
+              "addressRegion": "ID",
+              "addressCountry": "US"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "LandProperty",
+            "name": "Blakes Farms",
+            "description": "244-acre property with 2 pivot systems in Sand Creek area, north of Saint Anthony",
+            "url": "https://idahofarmlandforsale.com/blakes-farms.html",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Saint Anthony",
+              "addressRegion": "ID",
+              "addressCountry": "US"
+            }
+          }
+        }
+      ]
     }
     </script>
     
@@ -377,5 +471,4 @@
     });
     </script>
 </body>
-</html>" style="color: #e2e8f0; margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="#
+</html>
