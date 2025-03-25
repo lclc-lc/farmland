@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting Idaho Farmland For Sale about our premium agricultural properties in Fremont County. We'll respond to your inquiry soon.">
     <title>Thank You - Idaho Farmland For Sale</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,26 +19,79 @@
             line-height: 1.6;
             color: #2d3748;
             background-color: #f7fafc;
+        }
+
+        /* Set up a consistent container for alignment */
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('images/wheat-field.jpg');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Thank you container styles */
+        .main-content {
+            padding-top: 120px;
             text-align: center;
-            padding-top: 100px;
         }
 
         .thank-you-container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 60px;
             padding: 3rem;
             background: white;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-family: 'EB Garamond', serif;
         }
 
         h1 {
             color: #2c5282;
             margin-bottom: 1rem;
+            font-family: 'EB Garamond', serif;
+            font-size: 2.5rem;
         }
 
         p {
             margin-bottom: 2rem;
+            font-size: 1.2rem;
         }
 
         .home-button {
@@ -46,22 +101,54 @@
             padding: 0.75rem 1.5rem;
             border-radius: 6px;
             text-decoration: none;
+            margin-top: 1rem;
             font-weight: 500;
             transition: background-color 0.3s;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
         }
 
         .home-button:hover {
             background-color: #1a365d;
         }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
     </style>
-    <meta http-equiv="refresh" content="5;url=/" />
+    <meta http-equiv="refresh" content="5;url=index.html" />
 </head>
 <body>
-    <div class="thank-you-container">
-        <h1>Thank You!</h1>
-        <p>Your message has been sent successfully. We'll get back to you soon.</p>
-        <p>Redirecting to home page in 5 seconds...</p>
-        <a href="/" class="home-button">Return to Home Now</a>
-    </div>
+    <header>
+        <div class="page-wrapper">
+            <div class="header-inner">
+                <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Idaho Farmland For Sale</a></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#listings">Properties</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-wrapper main-content">
+        <div class="thank-you-container">
+            <h1>Thank You!</h1>
+            <p>Your message has been sent successfully. We'll get back to you soon.</p>
+            <p>Redirecting to home page in 5 seconds...</p>
+            <a href="index.html" class="home-button">Return to Home Now</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="page-wrapper">
+            <!-- Footer content -->
+        </div>
+    </footer>
 </body>
 </html>
