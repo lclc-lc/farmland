@@ -17,5 +17,30 @@
       <image:title>Liston Farms Property</image:title>
     </image:image>
   </url>
-  <!-- Repeat similar pattern for other URLs -->
+  <url>
+    <loc>https://idahofarmlandforsale.com/lenz-farms.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://idahofarmlandforsale.com/images/lenz-farms.jpg</image:loc>
+      <image:title>Lenz Farms Property</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idahofarmlandforsale.com/blakes-farms.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://idahofarmlandforsale.com/images/blakes-farms.jpg</image:loc>
+      <image:title>Blakes Farms Property</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idahofarmlandforsale.com/contact.html</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
