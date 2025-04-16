@@ -1,25 +1,2 @@
 [build]
   publish = "farmland"
-
-[[redirects]]
-  from = "/success"
-  to = "/index.html"
-  status = 302
-
-[[redirects]]
-  from = "http://www.idahofarmlandforsale.com/*"
-  to = "https://idahofarmlandforsale.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://idahofarmlandforsale.com/*"
-  to = "https://idahofarmlandforsale.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.idahofarmlandforsale.com/*"
-  to = "https://idahofarmlandforsale.com/:splat"
-  status = 301
-  force = true
