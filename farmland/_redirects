@@ -1,0 +1,4 @@
+# Force direct redirects in a single step
+http://www.idahofarmlandforsale.com/* https://idahofarmlandforsale.com/:splat 301!
+https://www.idahofarmlandforsale.com/* https://idahofarmlandforsale.com/:splat 301!
+http://idahofarmlandforsale.com/* https://idahofarmlandforsale.com/:splat 301!
