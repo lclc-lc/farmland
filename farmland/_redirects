@@ -1,4 +1,4 @@
-https://www.idahofarmlandforsale.com/*  https://www.idahofarmlandforsale.com/:splat  200
-https://idahofarmlandforsale.com/*      https://idahofarmlandforsale.com/:splat      200
-http://www.idahofarmlandforsale.com/*   https://www.idahofarmlandforsale.com/:splat  200
-http://idahofarmlandforsale.com/*       https://idahofarmlandforsale.com/:splat      200
+# Force direct redirects in a single step
+http://www.idahofarmlandforsale.com/* https://idahofarmlandforsale.com/:splat 301!
+https://www.idahofarmlandforsale.com/* https://idahofarmlandforsale.com/:splat 301!
+http://idahofarmlandforsale.com/* https://idahofarmlandforsale.com/:splat 301!
