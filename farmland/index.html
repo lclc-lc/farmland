@@ -1,475 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium irrigated farmland for sale in Fremont County, Idaho featuring Liston Farms, Lenz Farms, and Sand Creek Farms with secure water rights, potato storage, and productive soils. Ideal for crop and livestock farming on Idaho's most fertile agricultural land.">
-    <meta name="keywords" content="Idaho farmland, Fremont County farms, Saint Anthony farm property, irrigated farmland, potato farming Idaho, agricultural investment, water rights Idaho">
-    <!-- Add canonical tag -->
-    <link rel="canonical" href="https://idahofarmlandforsale.com/" />
-    <title>Idaho Farmland For Sale | Prime Agricultural Properties in Fremont County</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idaho Farmland For Sale | Prime Agricultural Properties in Fremont County</title>
+  
+  <meta name="description"
+    content="Looking for Idaho farmland for sale? Discover premium irrigated land and agricultural investment opportunities in Eastern Idaho. Listings include Liston Farms, Lenz Farms, and Sand Creek Farms." />
+   <meta name="keywords"
+    content="Idaho farmland for sale, Eastern Idaho land, agricultural investment Idaho, irrigated farmland, Fremont County farmland, potato farm Idaho, land property for sale Idaho" />
+  <meta name="author" content="IdahoFarmlandForSale.com" />
+  <link rel="canonical" href="https://idahofarmlandforsale.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+
+   <!-- Open Graph -->
+  <meta property="og:title" content="Idaho Farmland for Sale | Invest in Eastern Idaho Land" />
+  <meta property="og:description" content="Explore updated farmland listings and investment-ready land in Eastern Idaho." />
+  <meta property="og:type" content="website" />
+
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Idaho Farmland for Sale" />
+
+
+  <!-- Enhanced Schema markup for better SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Idaho Farmland For Sale",
+    "description": "Premium irrigated farmland for sale in Fremont County, Idaho. Listings include Liston Farms, Lenz Farms, and Sand Creek Farms with secure water rights and investment-ready land.",
+    "url": "https://idahofarmlandforsale.com",
+    "email": "IdahoFarmlandForSale@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Saint Anthony",
+      "addressRegion": "ID",
+      "postalCode": "83445",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.9654,
+      "longitude": -111.6822
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Eastern Idaho"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LandProperty",
+          "name": "Liston Farms",
+          "description": "84-acre farmland with 3 pivot systems, 78 irrigated acres, and a 100,000 cwt potato cellar. Located west of Saint Anthony on the Egin Bench.",
+          "url": "https://idahofarmlandforsale.com/liston-farms.html",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint Anthony",
+            "addressRegion": "ID",
+            "postalCode": "83445",
+            "addressCountry": "US"
+          }
         }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background-color: #f7fafc;
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LandProperty",
+          "name": "Lenz Farms",
+          "description": "1,016-acre farmland north of Saint Anthony with 635 pivot-irrigated acres and 438 acres of fenced livestock pasture.",
+          "url": "https://idahofarmlandforsale.com/lenz-farms.html",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint Anthony",
+            "addressRegion": "ID",
+            "postalCode": "83445",
+            "addressCountry": "US"
+          }
         }
-
-        /* Set up a consistent container for alignment */
-        .page-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "LandProperty",
+          "name": "Sand Creek Farms",
+          "description": "1,021-acre irrigated farmland north of Saint Anthony with 9 pivot systems, ideal for potato and grain production.",
+          "url": "https://idahofarmlandforsale.com/sandcreek-farms.html",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint Anthony",
+            "addressRegion": "ID",
+            "postalCode": "83445",
+            "addressCountry": "US"
+          }
         }
+      }
+    ]
+  }
+  </script>
 
-        /* Header styles */
-        header {
-            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('images/wheat-field.jpg');
-            background-size: cover;
-            background-position: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            padding: 1.5rem 0;
-        }
 
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 70px;
-            padding-right: 70px;
-        }
 
-        .logo {
-            font-size: 1.8rem;
-            color: #1a202c;
-            font-weight: 600;
-        }
 
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
 
-        nav a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
 
-        /* Hero section */
-        .hero-section {
-            padding-top: 120px;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
 
-        .hero-section h1 {
-            font-size: 2.8rem;
-            color: #2c5282;
-            margin-bottom: 1rem;
-        }
 
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
-        /* Listings section */
-        #listings {
-            padding-top: 40px;
-        }
+  <!-- all css path -->
+  <link href="assets/css/animate.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
 
-        /* Banner image style */
-        .banner-image {
-            position: relative;
-            width: 100%;
-            margin-bottom: 3rem;
-            padding: 0 70px;
-            max-width: 100%;
-        }
+  <style>
 
-        .banner-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+  </style>
 
-        /* Image map styles */
-        area {
-            cursor: pointer;
-        }
 
-        .listings-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 0 70px;
-        }
 
-        .listing-wrapper {
-            display: block; 
-            width: 100%;
-            height: 100%;
-        }
-
-        .listing {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .listing-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .property-details {
-            flex-grow: 1;
-        }
-
-        .listing-footer {
-            margin-top: auto;
-        }
-
-        .more-info-btn {
-            display: block;
-            background-color: #2c5282;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s;
-            text-align: center;
-            width: 100%;
-        }
-
-        .more-info-btn:hover {
-            background-color: #1a365d;
-        }
-
-        /* About section */
-        #about {
-            padding: 3rem 70px 0 70px;
-        }
-
-        #about h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-
-        .about-text {
-            max-width: 800px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a202c;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-            
-            .listings-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header-inner {
-                padding-left: 20px;
-                padding-right: 20px;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .banner-image, #about {
-                padding: 0 20px;
-            }
-
-            .footer-center ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-
-            .page-wrapper [style*="display: flex"] {
-                flex-direction: column;
-            }
-
-            .footer-left, .footer-center, .footer-right {
-                text-align: center;
-                margin-bottom: 1.5rem;
-            }
-        }
-    </style>
 </head>
-<body>
-    <header>
-        <div class="page-wrapper">
-            <div class="header-inner">
-                <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Idaho Farmland For Sale</a></div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#listings">Properties</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100">
+  <!------------------------------------ Navbar section -------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-shadow sticky-top py-3 py-md-2">
+    <div class="container">
+      <a class="brand-name" href="index.html">
+        <h5 class="fw-bold">Idaho Farmland For Sale</h5>
+      </a>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-3 mt-md-0" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdshukur.github.io/lcrapo/#propertise">Properties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-------------------------------- intro section ----------------------->
+  <div class="intro_section">
+    <div class="container">
+      <div class="row">
+        <div class="intro_contents text-center text-white wow fadeInUp">
+          <h1 class=" wow fadeInUp" data-wow-delay=".1s">Premium Idaho Farmland For Sale</h1>
+          <h5 class="pt-2 pt-md-0 wow fadeInUp" data-wow-delay=".2s">Discover exceptional agricultural investment
+            opportunities in Fremont County with secure water rights and proven productivity.</h5>
+          <div class="quote mt-3 pt- wow fadeInUp" data-wow-delay=".3s">
+            <a href="contact-us.html">Contact Us </a>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </div>
 
-    <main class="page-wrapper">
-        <!-- Added a hero section with H1 heading -->
-        <section class="hero-section">
-            <h1>Premium Idaho Farmland For Sale</h1>
-            <p>Discover exceptional agricultural investment opportunities in Fremont County with secure water rights and proven productivity</p>
-        </section>
 
-        <section id="listings">
-            <h2 class="section-title">Featured Properties</h2>
-            
-            <!-- Bird's eye view banner image with clickable areas -->
-            <div class="banner-image" style="position: relative;">
-                <img src="images/birdseye2.png" alt="Aerial view of Idaho farmland properties showing Liston, Lenz, and Sand Creek Farms in Fremont County" title="Fremont County Premium Farmland Properties">
-                
-                <!-- Clickable links positioned over each farm label -->
-                <a href="lenz-farms.html" style="position: absolute; left: 56%; top: 43.5%; transform: translate(-50%, -50%); border: 2px solid blue; background-color: white; color: blue; padding: 5px 10px; text-decoration: none; font-weight: bold;">Lenz Farms</a>
-                
-                <a href="sandcreek-farms.html" style="position: absolute; right: 19%; top: 5%; transform: translate(0, 0); border: 2px solid blue; background-color: white; color: blue; padding: 5px 10px; text-decoration: none; font-weight: bold;">Sand Creek Farms</a>
-                
-                <a href="liston-farms.html" style="position: absolute; left: 7%; bottom: 10%; transform: translate(0, 0); border: 2px solid blue; background-color: white; color: blue; padding: 5px 10px; text-decoration: none; font-weight: bold;">Liston Farms</a>
-            </div>
-            
-            <div class="listings-grid">
-                <!-- Liston Farms (left column) -->
-                <div class="listing-wrapper">
-                    <a href="liston-farms.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
-                        <div class="listing">
-                            <img src="images/liston-farm.png" alt="Liston Farms 84-acre property with 3 pivot systems, 78 irrigated acres, and 120,000 cwt potato cellar on Egin Bench" style="width: 100%; height: 250px; object-fit: contain; background-color: white; padding: 5px;">
-                            <div class="listing-content">
-                                <h3>Liston Farms</h3>
-                                <div class="property-details">
-                                    <p>Location: Fremont County, West of Saint Anthony (Egin Bench)</p>
-                                    <p>Acreage: 3 pivots, 78 irrigated</p>
-                                    <p>Water Rights: Surface & 40 AF storage water</p>
-                                    <p>Potato Cellar: 120,000 cwt</p>
-                                    <br>
-                                    <p>A home property with a 7-acre mini pivot is also available. Also a development parcel is available to the southeast of the Liston property.</p>
-                                    <br>
-                                </div>
-                                <div class="listing-footer">
-                                    <p style="margin-bottom: 1rem; font-style: italic;">Offers Accepted Fall 2025</p>
-                                    <span class="more-info-btn">View Details</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            
-                <!-- Lenz Farms (middle column) -->
-                <div class="listing-wrapper">
-                    <a href="lenz-farms.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
-                        <div class="listing">
-                            <img src="images/lenz-farm.png" alt="Lenz Farms 1,016-acre property with 5 pivot systems, 635 irrigated acres, and 380 acres grazing near Saint Anthony" style="width: 100%; height: 250px; object-fit: contain; background-color: white; padding: 5px;">
-                            <div class="listing-content">
-                                <h3>Lenz Farms</h3>
-                                <div class="property-details">
-                                    <p>Location: Fremont County, near Saint Anthony</p>
-                                    <p>Acreage: 5 pivots, 635 irrigated acres, 380 acres grazing</p>
-                                    <p>Water Rights: Surface & Groundwater</p>
-                                    <br>
-                                </div>
-                                <div class="listing-footer">
-                                    <p style="margin-bottom: 1rem; font-style: italic;">Offers Accepted Fall 2025</p>
-                                    <span class="more-info-btn">View Details</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Sand Creek Farms (right column) -->
-                <div class="listing-wrapper">
-                    <a href="sandcreek-farms.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
-                        <div class="listing">
-                            <img src="images/sandcreek-farms.png" alt="Sand Creek Farms 1,021-acre property with 9 pivot systems in Sand Creek area, north of Saint Anthony" style="width: 100%; height: 250px; object-fit: contain; background-color: white; padding: 5px;">
-                            <div class="listing-content">
-                                <h3>Sand Creek Farms</h3>
-                                <div class="property-details">
-                                    <p>Location: Fremont County, North of Saint Anthony (Sand Creek)</p>
-                                    <p>Acreage: 9 pivots, 1,021 irrigated</p>
-                                    <p>Water Rights: Groundwater</p>
-                                    <p>Potato Cellar: 120,000 cwt</p>
-                                </div>
-                                <div class="listing-footer">
-                                    <p style="margin-bottom: 1rem; font-style: italic;">Offers Accepted Fall 2025</p>
-                                    <span class="more-info-btn">View Details</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+  <!---------------------------------- Properties Overview section -------------------------->
+  <section>
+    <div class="Properties_Overview container bg-white py-5">
+      <div class="service_info text-center pb-5">
+        <h2 class="custom-heading">Properties Overview</h2>
+      </div>
 
-        <section id="about">
-            <h2>Farm Investments in Eastern Idaho</h2>
-            <div class="about-text">
-                <p>Idaho farmland represents a special opportunity to invest in our agricultural future. These premium properties offer established water rights, proven productivity, and the potential for generational value.</p>
-                <br>
-                <p>We believe family farms are the backbone of Idaho agriculture. Whether you're expanding existing operations or establishing a new legacy, these properties provide the foundation for sustainable farming success.</p>
-                <br>
-                <p>Fremont County farmland is known for its exceptional growing conditions, with rich volcanic soils ideal for potato production, grain crops, and hay. The area benefits from reliable irrigation sources, including both surface water and groundwater rights, providing security even during drier seasons.</p>
-                <br>
-                <p>Saint Anthony and the surrounding Fremont County area offer the perfect balance of productive farmland with proximity to agricultural markets, processing facilities, and transportation corridors.</p>
-                <br>
-                <p>Feel free to contact <a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #2c5282; text-decoration: underline;">IdahoFarmlandForSale@gmail.com</a> for more information or respond on our Contact page.</p>
-            </div>
-        </section>
-    </main>
+      <div class="banner-image">
+        <img class="img-fluid rounded" src="images/birdseye2.png"
+          alt="Aerial view of Idaho farmland properties showing Liston, Lenz, and Sand Creek Farms in Fremont County"
+          title="Fremont County Premium Farmland Properties">
 
-    <footer>
-        <div class="page-wrapper" style="padding: 0 70px; display: flex; justify-content: space-between; color: #e2e8f0;">
-            <div class="footer-left">
-                <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Idaho Farmland For Sale</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Fremont County's Premium Agricultural Properties</p>
-                <p style="font-size: 0.9rem;">Saint Anthony, Idaho</p>
-            </div>
-            <div class="footer-center">
-                <nav style="margin-bottom: 1rem;">
-                    <ul style="display: flex; gap: 1.5rem; list-style: none;">
-                        <li><a href="index.html" style="color: #e2e8f0; text-decoration: none;">Home</a></li>
-                        <li><a href="#listings" style="color: #e2e8f0; text-decoration: none;">Properties</a></li>
-                        <li><a href="contact.html" style="color: #e2e8f0; text-decoration: none;">Contact</a></li>
-                    </ul>
-                </nav>
-                <p style="font-size: 0.8rem;">&copy; 2025 Idaho Farmland For Sale. All rights reserved.</p>
-            </div>
-            <div class="footer-right">
-                <div style="margin-bottom: 1rem;">
-                    <a href="#" style="color: #e2e8f0; margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="#" style="color: #e2e8f0; margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" style="color: #e2e8f0; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <p style="font-size: 0.8rem;">Email: <a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #e2e8f0;">IdahoFarmlandForSale@gmail.com</a></p>
-            </div>
+        <a href="sand-creek-farms.html" class="sand-creek-link">Sand Creek Farms</a>
+
+        <a href="lenz-farms.html" class="lenz-link">Lenz Farms</a>
+
+        <a href="liston-farms.html" class="liston-link">Liston Farms</a>
+      </div>
+    </div>
+  </section>
+
+  <!------------------------------ services/propertise section ---------------------------------->
+  <section class="featured_propertise py-5" id="propertise">
+    <div class="featured_propertise_content">
+      <div class="container">
+        <div class="service_info text-center pb-5">
+          <h2 class="custom-heading">Featured Properties</h2>
         </div>
-    </footer>
-    
-    <!-- Enhanced Schema markup for better SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Idaho Farmland For Sale",
-      "description": "Premium irrigated farmland for sale in Fremont County, Idaho featuring Liston Farms, Lenz Farms, and Sand Creek Farms with secure water rights",
-      "url": "https://idahofarmlandforsale.com",
-      "email": "IdahoFarmlandForSale@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Saint Anthony",
-        "addressRegion": "ID",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "43.9654",
-        "longitude": "-111.6822"
-      },
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "LandProperty",
-            "name": "Liston Farms",
-            "description": "84-acre property with 3 pivot systems, 78 irrigated acres, and 120,000 cwt potato cellar on Egin Bench",
-            "url": "https://idahofarmlandforsale.com/liston-farms.html",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Saint Anthony",
-              "addressRegion": "ID",
-              "addressCountry": "US"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "LandProperty",
-            "name": "Lenz Farms",
-            "description": "1,016-acre property with 5 pivot systems, 635 irrigated acres, and 380 acres grazing near Saint Anthony",
-            "url": "https://idahofarmlandforsale.com/lenz-farms.html",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Saint Anthony",
-              "addressRegion": "ID",
-              "addressCountry": "US"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "LandProperty",
-            "name": "Sand Creek Farms",
-            "description": "244-acre property with 2 pivot systems in Sand Creek area, north of Saint Anthony",
-            "url": "https://idahofarmlandforsale.com/sandcreek-farms.html",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Saint Anthony",
-              "addressRegion": "ID",
-              "addressCountry": "US"
-            }
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('img[usemap]').rwdImageMaps();
-    });
-    </script>
+        <div class="row align-items-stretch">
+          <div class="col-12 col-md-6 col-xl-4 mb-3">
+            <div class="f_p_c p-3 h-100 wow fadeInUp" data-wow-delay=".1s">
+              <img class="img-fluid" src="images/liston-farm.png" alt="" loading="lazy">
+              <h5 class="service-title">Liston Farms</h5>
+              <p><span>Location:</span> Fremont County, West of Saint Anthony (Egin Bench)</p>
+              <p><span>Acreage:</span> 3 pivots, 78 irrigated</p>
+              <p><span>Water Rights:</span> Surface & 40 AF storage water</p>
+              <p><span>Potato Cellar:</span> 100,000 cwt</p>
+              <div class="para_c mt-auto">
+                <p class="my-3">A home development parcel is available to the southeast of the Liston property.</p>
+                <mark><i>Offers Accepted Fall 2025</i></mark>
+                <div class="quote btn d-grid mt-3">
+                  <a href="liston-farms.html">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-4 mb-3">
+            <div class="f_p_c p-3 h-100 wow fadeInUp" data-wow-delay=".2s">
+              <img class="img-fluid contain" src="images/lenz-farm.png" alt="" loading="lazy">
+              <h5 class="service-title">Lenz Farms</h5>
+              <p><span>Location:</span> Fremont County, near Saint Anthony</p>
+              <p><span>Acreage:</span> 5 pivots, 635 irrigated acres, 380 acres grazing</p>
+              <p><span>Water Rights:</span> Surface & Groundwater</p>
+              <div class="para_c mt-auto">
+                <mark><i>Offers Accepted Fall 2025</i></mark>
+                <div class="quote btn d-grid mt-3 pt-">
+                  <a href="lenz-farms.html">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-4 mb-3">
+            <div class="f_p_c p-3 h-100 wow fadeInUp" data-wow-delay=".3s">
+              <img class="img-fluid contain" src="images/sandcreek-farms.png" alt="" loading="lazy">
+              <h5 class="service-title">Sand Creek Farms</h5>
+              <p><span>Location:</span> Fremont County, North of Saint Anthony (Sand Creek)</p>
+              <p><span>Acreage:</span> 9 pivots, 1,021 irrigated</p>
+              <p><span>Water Rights:</span> Groundwater</p>
+              <p><span>Potato Cellar:</span> 120,000 cwt</p>
+              <div class="para_c mt-auto">
+                <mark><i>Offers Accepted Fall 2025</i></mark>
+                <div class="quote btn d-grid mt-3 pt-">
+                  <a href="sand-creek-farms.html">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+  <!------------------------------ About section ---------------------------------->
+  <section id="about" class="py-5 my-md-1">
+    <div class="container py-0 py-md-5">
+      <div class="row g-0 g-md-5">
+        <!-- Left Side: Image with Positioned Shape -->
+        <div class="col-lg-6 position-relative wow fadeLeft" data-wow-duration="1s">
+          <div class="shape-container wow fadeInLeft">
+            <div class="img-border">
+              <img class="img-fluid" src="images/Liston-cellar.png" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- Right Side: Content -->
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="about_title">
+            <h2>
+              Farm Investments in Eastern Idaho
+            </h2>
+          </div>
+
+          <p class="pb-2">Idaho farmland represents a special opportunity to invest in our agricultural future. These
+            premium
+            properties offer established water rights, proven productivity, and the potential for generational value.
+          </p>
+
+          <p class="pb-2"> We believe family farms are the backbone of Idaho agriculture. Whether you're expanding
+            existing operations
+            or establishing a new legacy, these properties provide the foundation for sustainable farming success.</p>
+
+          <p class="pb-2"> Fremont County farmland is known for its exceptional growing conditions, with rich volcanic
+            soils ideal for
+            potato production, grain crops, and hay. The area benefits from reliable irrigation sources, including both
+            surface water and groundwater rights, providing security even during drier seasons.</p>
+          </p>
+
+
+          <p class="pb-2"> Saint Anthony and the surrounding Fremont County area offer the perfect balance of productive
+            farmland with
+            proximity to agricultural markets, processing facilities, and transportation corridors.</p>
+
+
+          <div>
+            <p class="mt-1">
+              Feel free to contact <a class="text-decoration-underline"
+                href="mailto:IdahoFarmlandForSale@gmail.com">IdahoFarmlandForSale@gmail.com</a>
+              for more information or respond on our
+              <a class="text-decoration-underline" href="contact-us.html">Contact page</a>.
+            </p>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!------------------------------------ footer section ------------------------>
+
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-md-4 mb-3 text-center">
+          <h5 class="mb-2 fw-bold">Idaho Farmland For Sale</h5>
+          <p class="mb-0 text-white">
+            Fremont County's Premium Agricultural Properties near Saint Anthony, Idaho
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5 class="mb-2 fw-bold">Quick Links</h5>
+          <ul class="list-unstyled ">
+            <li><a class="text-white" href="index.html">Home</a></li>
+            <li><a class="text-white" href="https://mdshukur.github.io/lcrapo/#propertise">Properties</a></li>
+            <li><a class="text-white" href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5 class="mb-2 fw-bold">Properties</h5>
+          <ul class="list-unstyled ">
+            <li><a class="text-white" href="liston-farms.html">Liston Farms</a></li>
+            <li><a class="text-white" href="lenz-farms.html">Lenz Farms</a></li>
+            <li><a class="text-white" href="sand-creek-farms.html">Sand Creek Farms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-3 border-top border-secondary">
+        <p class="mb-0 text-white">
+          © 2025 Idaho Farmland For Sale. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript at the bottom -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <!-- main js -->
+  <script src="assets/js/custom.js"></script>
+
+
+  <!-------------------- animation active js---------------->
+  <script>
+    new WOW().init();
+  </script>
+
+
+
 </body>
+
 </html>

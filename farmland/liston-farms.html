@@ -1,449 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liston Farms: 85 acres on Egin Bench featuring 78 irrigated acres, three pivot systems, and a 120,000 cwt potato cellar. Premium sandy soils ideal for potato production in Fremont County, Idaho.">
-    <title>Liston Farms - Idaho Farmland For Sale</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Liston Farms - Idaho Farmland For Sale</title>
+
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background-color: #f7fafc;
-        }
-
-        /* Set up a consistent container for alignment */
-        .page-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* Header styles */
-        header {
-            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('images/wheat-field.jpg');
-            background-size: cover;
-            background-position: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            padding: 1.5rem 0;
-        }
-
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 70px;
-            padding-right: 70px;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            color: #1a202c;
-            font-weight: 600;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        nav a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        /* Property detail styles */
-        .property-detail {
-            padding-top: 120px;
-            padding-bottom: 50px;
-        }
-
-        .property-container {
-            padding: 0 70px;
-        }
-
-        /* Updated floating title styles - left aligned */
-        .floating-title {
+        .sticky-section-title-wrapper {
             position: sticky;
-            top: 90px; /* Position below the main header */
-            z-index: 900;
-            background-color: rgba(247, 250, 252, 0.9); /* Semi-transparent background */
-            padding: 1rem 0;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(5px); /* Creates a frosted glass effect */
-            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            top: 0px;
+            z-index: 50;
+            padding: 10px 0;
         }
 
-        .floating-title h1 {
-            font-size: 2.5rem;
-            text-align: left; /* Left aligned title */
-        }
-
-        /* Updated property image style to be larger and centered */
-        .property-image {
-            margin-bottom: 2rem;
-            text-align: center; /* Ensure the image is centered */
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .property-image img {
-            width: auto;
-            max-width: 100%;
-            height: auto;
-            min-height: 600px; /* Making the image larger */
-            max-height: 700px; /* Setting a max height but allowing it to scale proportionally */
-            object-fit: contain;
-            display: block;
-            margin: 0 auto; /* Ensure the image is centered within its container */
-        }
-
-        /* Property content styling */
-        .property-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            width: 100%;
-            font-family: 'EB Garamond', serif;
-            color: black;
-        }
-
-        .property-content h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-family: 'EB Garamond', serif;
-            color: black;
-        }
-
-        .property-content p {
-            font-size: 1.2rem;
-        }
-
-        .property-overview {
-            margin-bottom: 1.5rem;
-        }
-
-        .parcel-info {
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            font-weight: normal; /* Ensuring it's not bold */
-        }
-
-        /* Section styling */
-        .section {
-            margin: 2rem 0;
-        }
-
-        .section h2 {
-            font-size: 1.8rem; /* Same size as Property Overview */
-            margin-bottom: 1rem;
-            font-family: 'EB Garamond', serif;
-            color: black;
-        }
-
-        /* Map images styling */
-        .map-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .map-image {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .map-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .single-map {
-            width: 100%;
-            margin-bottom: 2rem;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .single-map img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Table styling for both tables */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: 'EB Garamond', serif;
-            color: black;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .data-table th, 
-        .data-table td {
-            border: 1px solid #ddd;
-            padding: 12px 20px; /* Increased padding for better spacing */
-            text-align: center;
-        }
-
-        .data-table th:first-child,
-        .data-table td:first-child {
-            text-align: left; /* Left align first column */
-        }
-
-        .data-table th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-
-        .data-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .back-button {
+        .sticky-section-title {
             display: inline-block;
-            background-color: #2c5282;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 2rem;
-            font-weight: 500;
-            transition: background-color 0.3s;
-            font-family: 'Helvetica Neue', Arial, sans-serif; /* Keep buttons in original font */
-        }
-
-        .back-button:hover {
-            background-color: #1a365d;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a202c;
-            padding: 2rem 0;
-            margin-top: 4rem;
+            background-color: #f8f9fa;
+            padding: 8px 16px;
         }
     </style>
+
 </head>
-<body>
-    <header>
-        <div class="page-wrapper">
-            <div class="header-inner">
-                <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Idaho Farmland For Sale</a></div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#listings">Properties</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100">
+<!------------------------------------ Navbar section -------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-shadow sticky-top py-3 py-md-2">
+    <div class="container">
+      <a class="brand-name" href="index.html">
+        <h5 class="fw-bold">Idaho Farmland For Sale</h5>
+      </a>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse  mt-md-0" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdshukur.github.io/lcrapo/#propertise">Properties</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <section>
+        <div class="single-farms pb-5">
+            <div class="containerr">
+                <div class="single-farms-content">
+                    <div class="sticky-section-title-wrapper">
+                        <div class="sticky-section-title mb-3" style="margin-top:2.7rem;">
+                            <h2 class="mb-0 fw-bold">Liston Farms</h2>
+                        </div>
+                    </div>
+
+                    <div class="single_details_content shadow-sm p-md-5 p-3 py-4  bg-body rounded">
+                        <img class="img-fluid rounded" src="images/liston-farm.png" alt="" >
+
+                        <h3>Property Overview</h3>
+                        <p>Located west of Saint Anthony on the Egin Bench, Liston Farms comprises 84 acres
+                            of which 78 are irrigated with three pivot irrigation systems. This property also includes a
+                            100,000 cwt potato cellar, making it an ideal operation for potato production.</p>
+                        <h3>Fremont County Parcels</h3>
+                        <p>RP07N39E097508</p>
+                        <h3>Early & Secure Water Rights</h3>
+                        <p>Liston Farms water allocation is managed through shares in Egin Bench Canals,
+                            Inc. The farm holds multiple classes of water shares, each with a distinct priority date:
+                        </p>
+                        <div class="table-content">
+                            <div>
+                                <table class="table table-striped table-bordered mb-0">
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="p-2 p-md-3">Share Class</th>
+                                            <th scope="col" class="p-2 p-md-3">Priority Date</th>
+                                            <th scope="col" class="p-2 p-md-3">Shares *</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td class="p-2 p-md-3">Class B</td>
+                                            <td class="p-2 p-md-3">06/21/1888</td>
+                                            <td class="p-2 p-md-3">311.70622</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="p-2 p-md-3">Class D</td>
+                                            <td class="p-2 p-md-3">07/29/1892</td>
+                                            <td class="p-2 p-md-3">48.892217</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="p-2 p-md-3">Class G</td>
+                                            <td class="p-2 p-md-3">04/01/1939</td>
+                                            <td class="p-2 p-md-3">11.734127</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                            <div class="mark_h">
+                                <mark><i style="letter-spacing:1px;font-size:14px;">* Surface water rights shares listed here are approximate, pending Spring 2025 survey and border adjustment.</i></mark>
+                             </div>
+
+
+
+                         <h3>Well-Maintained Irrigation Systems</h3>
+                        <div class="table-content">
+                            <div>
+                                <table class="table table-striped table-bordered mb-0">
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="p-2 p-md-3">Field</th>
+                                            <th scope="col" class="p-2 p-md-3">Pivot</th>
+                                            <th scope="col" class="p-2 p-md-3">Shared Pump*</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td class="p-2 p-md-3">Liston Northwest Mini</td>
+                                            <td class="p-2 p-md-3">2-Tower Valley Center</td>
+                                            <td class="p-2 p-md-3 align-middle text-center " rowspan="3">40 HP</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="p-2 p-md-3">Liston West</td>
+                                            <td class="p-2 p-md-3">4-Tower Lockwood Center</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="p-2 p-md-3">Liston East</td>
+                                            <td class="p-2 p-md-3">5-Tower Valley Center</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                           <div class="mark_h">
+                                <mark><i style="letter-spacing:1px;font-size:14px;">* The Liston Farm uses a shared pump with a property to the west, ref: Fremont County document #606688.</i></mark>
+                             </div>
+                           <h3>Liston, Irrigated</h3>
+
+                         <img class="img-fluid " src="images/Liston-aerial.png" alt="" loading="lazy">
+                       <h3>Potato Storage Facility</h3>
+                        <p>The property includes a well-maintained 100,000 cwt potato cellar with modern temperature and humidity control systems. The storage facility features:
+                        </p>
+                         <div class="list_style">
+                            <ul>
+                                <li>Automated climate control system with efficient forced-air ventilation</li>
+                                <li>Drive-through design for easy loading/unloading</li>
+                                <li>Built in 1994, upgraded insulation system installed in 2020</li>
+                            </ul>
+                         </div>
+
+                        <img class="img-fluid " src="images/Liston-cellar.png" alt="" loading="lazy">
+                        <p>This storage facility provides significant added value and operational flexibility for the farm operation.</p>
+                        <h3>Premium Sandy Soils</h3>
+                       <p>The Liston Farms property is situated on the Egin Bench, known for its exceptional sandy loam soils that are particularly well-suited for potato production. These light soils warm quickly in the spring, allowing for earlier planting, and provide excellent drainage and tuber development conditions.</p>
+                       <img class="img-fluid " src="images/liston-soils.png" alt="" loading="lazy">
+
+                        <h3>Residential Lot</h3>
+                      <img class="img-fluid " src="images/liston-development-lot.png" alt="" loading="lazy">  
+                       
+                      <p>A home-development parcel of 2.68 acres is located to the southeast of Liston Farms. The lot is equipped with a residential well and electrical hook-up.</p>
+                      
+                       <h3>Investment Opportunity</h3>
+                       <img class="img-fluid " src="images/Picture1.jpg" alt="" loading="lazy">
+                        <p>Liston Farms offers a unique investment opportunity with these key advantages:
+                        </p>
+                         <div class="list_style">
+                            <ul>
+                                <li>Rare combination of irrigated acreage with on-site potato storage</li>
+                                <li>Premium sandy soils ideal for potato production</li>
+                                <li>Excellent location on the productive Egin Bench</li>
+                            </ul>
+                         </div>  
+                         <p>This property would be ideal for a potato producer looking to expand operations with both growing area and storage capacity in one purchase.
+                        </p>
+
+                         <h3>Timeline</h3>
+                         <p>We will begin accepting offers for this premium property in Fall 2025. Qualified buyers are encouraged to schedule a property tour prior to the offering period.
+                        </p>
+
+                         <h3>Due Diligence</h3>
+                         <p>All information should be independently verified by buyer. Property availability and details are subject to change or withdrawal without notice. Information provided is from sources deemed reliable but not warranted.
+                        </p>
+
+
+                         <h3>Contact Information</h3>
+                         <p>For more information about this property or to schedule a viewing, please contact us at: <a class="text-decoration-underline" href="mailto:IdahoFarmlandForSale@gmail.com">IdahoFarmlandForSale@gmail.com</a>
+                        </p>
+
+                       <div class="quote mt-3">
+                         <a href="contact-us.html">Request Information</a>
+                       </div>
+
+
+
+
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="page-wrapper">
-        <section class="property-detail">
-            <div class="property-container">
-                <!-- Floating title that remains visible while scrolling - now left-aligned -->
-                <div class="floating-title">
-                    <h1>Liston Farms</h1>
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-md-4 mb-3 text-center">
+                    <h5 class="mb-2 fw-bold">Idaho Farmland For Sale</h5>
+                    <p class="mb-0 text-white">
+                  Fremont County's Premium Agricultural Properties near Saint Anthony, Idaho
+                    </p>
                 </div>
-
-                <!-- Updated image to be larger and centered -->
-                <div class="property-image">
-                    <img src="images/liston-farm.png" alt="Main view of Liston Farms 84-acre property with 78 irrigated acres west of Saint Anthony on Egin Bench">
+                <div class="col-md-4 text-center">
+                    <h5 class="mb-2 fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled ">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="https://mdshukur.github.io/lcrapo/#propertise">Properties</a></li>
+                        <li><a class="text-white" href="contact-us.html">Contact</a></li>
+                    </ul>
                 </div>
-
-                <!-- Property content with updated structure -->
-                <div class="property-content">
-                    <!-- First section with Property Overview -->
-                    <h2>Property Overview</h2>
-                    <div class="property-overview">
-                        <p>Located west of Saint Anthony on the Egin Bench, Liston Farms comprises 84 acres of which 78 are irrigated with three pivot irrigation systems. This property also includes a 120,000 cwt potato cellar, making it an ideal operation for potato production.</p>
-                    </div>
-                    
-                    <!-- Added separate Fremont County Parcels section -->
-                    <h2>Fremont County Parcel</h2>
-                    <p class="parcel-info">RP07N39E097508</p>
-                    
-                   <!-- Water Rights Section -->
-<div class="section">
-    <h2>Early &amp; Secure Water Rights</h2>
-    <p>Liston Farms water allocation is managed through shares in Egin Bench Canals, Inc. The farm holds multiple classes of water shares, each with a distinct priority date:</p>
-    <br>
-    <table class="data-table" style="margin-bottom: 0;">
-        <thead>
-            <tr>
-                <th>Share Class</th>
-                <th>Priority Date</th>
-                <th>Shares *</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Class B</td>
-                <td>06/21/1888</td>
-                <td>311.70622</td>
-            </tr>
-            <tr>
-                <td>Class D</td>
-                <td>07/29/1892</td>
-                <td>48.892217</td>
-            </tr>
-            <tr>
-                <td>Class G</td>
-                <td>04/01/1939</td>
-                <td>11.734127</td>
-            </tr>
-        </tbody>
-    </table>
-    <p style="font-size: 1rem; font-style: italic; margin-top: 0; padding-top: 4px;">* Surface water rights shares listed here are approximate, pending Spring 2025 survey and border adjustment.</p>
-</div>
-
-<!-- Irrigation Systems Section -->
-<div class="section">
-    <h2>Well-Maintained Irrigation Systems</h2>
-    <table class="data-table" style="margin-bottom: 0;">
-        <thead>
-            <tr>
-                <th>Field</th>
-                <th>Pivot</th>
-                <th>Shared Pump *</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Liston Northwest Mini</td>
-                <td>2-Tower Valley Center</td>
-                <td rowspan="3" style="vertical-align: middle;">40 HP</td>
-            </tr>
-            <tr>
-                <td>Liston West</td>
-                <td>4-Tower Lockwood Center</td>
-            </tr>
-            <tr>
-                <td>Liston East</td>
-                <td>5-Tower Valley Center</td>
-            </tr>
-        </tbody>
-    </table>
-    <p style="font-size: 1rem; font-style: italic; margin-top: 0; padding-top: 4px;">* The Liston Farm uses a shared pump with a property to the west, ref: Fremont County document #606688.</p>
-</div>
-
-<!-- Added Liston, Irrigated section -->
-<div class="section">
-    <h2>Liston, Irrigated</h2>
-    <div class="single-map">
-        <img src="images/Liston-aerial.png" alt="Aerial view of Liston Farms showing three pivot irrigation systems and field layouts on Egin Bench">
-    </div>
-</div>
-                    
-<!-- Potato Cellar Section -->
-<div class="section">
-    <h2>Potato Storage Facility</h2>
-    <p style="margin-bottom: 1rem;">The property includes a well-maintained 120,000 cwt potato cellar with modern temperature and humidity control systems. The storage facility features:</p>
-    <ul style="margin: 1rem 0 1rem 2rem; font-family: 'EB Garamond', serif; font-size: 1.2rem;">
-        <li>Automated climate control system with efficient forced-air ventilation</li>
-        <li>Drive-through design for easy loading/unloading</li>
-        <li>Built in 1994, upgraded insulation system installed in 2020</li>
-    </ul>
-    
-    <!-- Added cellar image -->
-    <div class="single-map">
-        <img src="images/Liston-cellar.png" alt="120,000 cwt potato storage facility at Liston Farms with modern climate control systems built in 1994">
-    </div>
-    
-    <p>This storage facility provides significant added value and operational flexibility for the farm operation.</p>
-</div>
-                    
-<!-- Soils Map Section -->
-<div class="section">
-    <h2>Premium Sandy Soils</h2>
-    <p style="margin-bottom: 1rem;">The Liston Farms property is situated on the Egin Bench, known for its exceptional sandy loam soils that are particularly well-suited for potato production. These light soils warm quickly in the spring, allowing for earlier planting, and provide excellent drainage and tuber development conditions.</p>
-    
-    <!-- Added soils image -->
-    <div class="single-map">
-        <img src="images/liston-soils.png" alt="Soil classification map of Liston Farms showing premium sandy loam soils ideal for potato production on Egin Bench">
-    </div>
-</div>
-
-<!-- New Residential Lots Section -->
-<div class="section">
-    <h2>Residential Lots</h2>
-    <div class="single-map">
-        <img src="images/liston-home.png" alt="19.46-acre residential property with 7-acre mini pivot available near Liston Farms for hobby farming or irrigated grazing">
-    </div>
-    <p style="margin: 1rem 0;">For those interested, a home property of 17 acres, which includes a 7-acre mini pivot, a potential hobby farm or pasture is available for purchase to the northeast, suitable for farming or irrigated grazing. Additionally, a developable parcel of 2.68 acres is located to the southeast of Liston Farms.</p>
-    <div class="single-map">
-        <img src="images/liston-development-lot.png" alt="Map showing Liston Farms main property, 17-acre home property, and 2.75-acre developable parcel southeast of main farm">
-    </div>
-</div>
-                    
-<!-- Investment Opportunity Section -->
-<div class="section">
-    <h2>Investment Opportunity</h2>
-    <div class="single-map">
-        <img src="images/Picture1.jpg" alt="Agricultural investment opportunity visualization showing Liston Farms value proposition with potato storage and irrigated farmland">
-    </div>
-    <p>Liston Farms offers a unique investment opportunity with these key advantages:</p>
-    <ul style="margin: 1rem 0 1rem 2rem; font-family: 'EB Garamond', serif; font-size: 1.2rem;">
-        <li>Rare combination of irrigated acreage with on-site potato storage</li>
-        <li>Premium sandy soils ideal for potato production</li>
-        <li>Excellent location on the productive Egin Bench</li>
-    </ul>
-    <p>This property would be ideal for a potato producer looking to expand operations with both growing area and storage capacity in one purchase.</p>
-</div>
-                    
-<h2 style="margin-top: 2rem;">Timeline</h2>
-<p>We will begin accepting offers for this premium property in Fall 2025. Qualified buyers are encouraged to schedule a property tour prior to the offering period.</p>
-
-<!-- Added Due Diligence section -->
-<h2 style="margin-top: 2rem;">Due Diligence</h2>
-<p>All information should be independently verified by buyer. Property availability and details are subject to change or withdrawal without notice. Information provided is from sources deemed reliable but not warranted.</p>
-
-<h2 style="margin-top: 2rem;">Contact Information</h2>
-<p>For more information about this property or to schedule a viewing, please contact us at: <a href="mailto:IdahoFarmlandForSale@gmail.com" style="color: #2c5282; text-decoration: underline;">IdahoFarmlandForSale@gmail.com</a></p>
-                    
-<a href="contact.html" class="back-button">Request Information</a>
-<a href="index.html" class="back-button" style="background-color: #4a5568; margin-left: 1rem;">Back to All Properties</a>
+                <div class="col-md-4 text-center">
+                    <h5 class="mb-2 fw-bold">Properties</h5>
+                    <ul class="list-unstyled ">
+                        <li><a class="text-white" href="liston-farms.html">Liston Farms</a></li>
+                        <li><a class="text-white" href="lenz-farms.html">Lenz Farms</a></li>
+                        <li><a class="text-white" href="sand-creek-farms.html">Sand Creek Farms</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="page-wrapper">
-            <!-- Footer content -->
+            <div class="text-center pt-3 border-top border-secondary">
+                <p class="mb-0 text-white">
+                    © 2025 Idaho Farmland For Sale. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
+
+
+    <!-- JavaScript at the bottom -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+    <!-------------------- animation active js---------------->
+    <script>
+        new WOW().init();
+    </script>
+
+
+
 </body>
+
 </html>
