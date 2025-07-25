@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://idahofarmlandforsale.com/</loc>
-    <lastmod>2025-03-25</lastmod>
+    <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://idahofarmlandforsale.com/liston-farms.html</loc>
-    <lastmod>2025-03-25</lastmod>
+    <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://idahofarmlandforsale.com/lenz-farms.html</loc>
-    <lastmod>2025-03-25</lastmod>
+    <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -28,18 +28,18 @@
     </image:image>
   </url>
   <url>
-    <loc>https://idahofarmlandforsale.com/blakes-farms.html</loc>
-    <lastmod>2025-03-25</lastmod>
+    <loc>https://idahofarmlandforsale.com/sand-creek-farms.html</loc>
+    <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://idahofarmlandforsale.com/images/blakes-farms.jpg</image:loc>
+      <image:loc>https://idahofarmlandforsale.com/images/sand-creek-farms.jpg</image:loc>
       <image:title>Blakes Farms Property</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://idahofarmlandforsale.com/contact.html</loc>
-    <lastmod>2025-03-25</lastmod>
+    <loc>https://idahofarmlandforsale.com/contact-us.html</loc>
+    <lastmod>2025-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
